@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Premium Custom Website — Full Features</title>
+  <meta name="description" content="Jasa pembuatan website premium: custom design, admin panel, member area, payment integration, SEO advanced, hosting & domain 1 tahun.">
+  <meta name="keywords" content="website custom, web developer, integrasi pembayaran, admin panel, SEO, member area">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- tiny placeholder -->
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Premium Custom Website — Full Features",
+    "description": "Custom website, admin panel, payment integration, SEO, member area, hosting & domain 1 year.",
+    "provider": {"@type":"Person","name":"Web Developer"}
+  }
+  </script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#06b6d4; --glass:rgba(255,255,255,0.04);
+      --radius:14px; --maxw:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,#061021 0%,#081426 100%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.45; padding:24px; display:flex; justify-content:center; position: relative;
+      overflow-x: hidden;
+    }
+    
+    /* Animated gradient background */
+    .gradient-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: linear-gradient(-45deg, #061021, #081426, #0a1a36, #0b1220);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Particles container */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+    .site{width:100%; max-width:var(--maxw); position: relative; z-index: 1;}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600; transition: color 0.3s ease;}
+    nav a:hover{color:var(--accent)}
+    .btn{background:linear-gradient(90deg,var(--accent),#7c3aed);border:none;padding:10px 16px;border-radius:10px;color:#032025;font-weight:700;cursor:pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;}
+    .btn:hover{transform: translateY(-2px); box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);}
+
+    .hero{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:var(--radius);display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center; position: relative;}
+    .hero .kicker{color:var(--accent);font-weight:700;margin-bottom:8px}
+    .hero h1{font-size:28px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:10px}
+    .feature-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    .card:hover{transform: translateY(-5px); box-shadow: 0 12px 24px rgba(2,6,23,0.8);}
+    .mini{font-size:13px;color:var(--muted)}
+
+    /* right demo panel */
+    .panel{background:linear-gradient(180deg,#071026, #08162b);padding:18px;border-radius:12px}
+    .panel h3{margin:0 0 10px}
+    .panel .meta{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:10px;font-size:13px}
+
+    /* features */
+    section.features{margin-top:22px;display:grid;grid-template-columns:1fr 360px;gap:20px}
+    .features-list{display:grid;gap:12px}
+    .feature-item{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:12px;border-radius:10px; transition: transform 0.3s ease;}
+    .feature-item:hover{transform: translateX(5px);}
+    .fi-icon{width:44px;height:44px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;border-radius:8px}
+
+    /* pricing */
+    .pricing{display:flex;gap:14px}
+    .price-card{flex:1;padding:16px;border-radius:12px;background:linear-gradient(180deg,#071026,#061624);border:1px solid rgba(255,255,255,0.03); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    .price-card:hover{transform: translateY(-5px); box-shadow: 0 12px 24px rgba(2,6,23,0.8);}
+    .price{font-size:22px;font-weight:800}
+
+    /* testimonials */
+    .testimonials{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .testi{background:linear-gradient(0deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:12px; transition: transform 0.3s ease;}
+    .testi:hover{transform: translateY(-5px);}
+    .testi-header{display:flex; gap:10px; align-items:center; margin-bottom:8px;}
+    .testi-avatar{width:40px; height:40px; border-radius:50%; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#f1f1f1;}
+    .testi-avatar img{width:100%; height:100%; object-fit:cover;}
+
+    /* FAQ Section - IMPROVED PERFORMANCE */
+    .faq-section{margin-top:22px;}
+    .faq-container{display:grid;gap:12px;margin-top:12px;}
+    .faq-item{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);}
+    .faq-question{display:flex;justify-content:space-between;align-items:center;padding:16px;cursor:pointer;font-weight:600;transition:background 0.3s ease;}
+    .faq-question:hover{background:rgba(255,255,255,0.02);}
+    .faq-question.active{color:var(--accent);}
+    .faq-icon{transition:transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    .faq-question.active .faq-icon{transform:rotate(180deg);}
+    
+    /* Improved FAQ answer with better performance */
+    .faq-answer{
+      overflow: hidden;
+      will-change: transform, opacity;
+      transform: translateY(-10px);
+      opacity: 0;
+      height: 0;
+      transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        height 0s 0.3s;
+    }
+    
+    .faq-answer.open{
+      transform: translateY(0);
+      opacity: 1;
+      height: auto;
+      transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        height 0s;
+    }
+    
+    .faq-answer-content{
+      padding: 0 16px 16px;
+      transform: translateY(-5px);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .faq-answer.open .faq-answer-content{
+      transform: translateY(0);
+    }
+
+    /* maps section */
+    .maps-section{margin-top:22px;}
+    .map-container{height:300px; border-radius:12px; overflow:hidden; margin-top:12px; box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+
+    footer{margin-top:26px;padding:18px;border-radius:12px;background:transparent;display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      section.features{grid-template-columns:1fr}
+      .feature-cards{grid-template-columns:repeat(2,1fr)}
+      .testimonials{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    @media (max-width:520px){
+      body{padding:14px}
+      .feature-cards{grid-template-columns:1fr}
+      .logo{width:40px;height:40px}
+      .hero h1{font-size:22px}
+      .pricing{flex-direction:column;}
+    }
+
+    /* small niceties */
+    .muted{color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    a.ghost{color:var(--accent);text-decoration:none;font-weight:700}
+    
+    /* floating elements */
+    .floating-element {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(6, 182, 212, 0.1);
+      filter: blur(40px);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated gradient background -->
+  <div class="gradient-bg"></div>
+  
+  <!-- Particles container -->
+  <div id="particles-js"></div>
+  
+  <!-- Floating elements -->
+  <div class="floating-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
+  <div class="floating-element" style="width: 200px; height: 200px; bottom: 15%; right: 8%;"></div>
+  
+  <main class="site" role="main">
+    <header>
+      <div class="brand">
+        <div class="logo">W</div>
+        <div>
+          <div style="font-weight:800">Premium Website</div>
+          <div class="mini muted">Custom · Full features · Responsive</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#features">Fitur</a>
+        <a href="#pricing">Harga</a>
+        <a href="#faq">FAQ</a>
+        <a href="#testimonials">Testimoni</a>
+        <a href="#maps">Lokasi</a>
+        <a href="#contact" class="btn">Mulai Sekarang</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="kicker">PREMIUM • DONE-FOR-YOU</div>
+        <h1 id="hero-title">Website Custom Full Features — Siap Pakai & Responsif</h1>
+        <p>Dibangun dengan HTML, CSS, dan JavaScript modern. Termasuk admin panel, member area, integrasi pembayaran, SEO advanced, hosting & domain 1 tahun, dan support prioritas.</p>
+
+        <div class="cta-row">
+          <button class="btn" id="startBtn">Mulai Proyek</button>
+          <button class="card" id="demoBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:10px;color:var(--muted);cursor:pointer">Lihat Demo</button>
+        </div>
+
+        <div class="feature-cards" aria-hidden="false">
+          <div class="card">
+            <div style="font-weight:700">Admin Panel</div>
+            <div class="mini muted">Kelola konten, pengguna, pesanan.</div>
+          </div>
+          <div class="card">
+            <div style="font-weight:700">Payment Gateway</div>
+            <div class="mini muted">Midtrans, Stripe, PayPal, dsb (sandbox & live).</div>
+          </div>
+          <div class="card">
+            <div style="font-weight:700">SEO Advanced</div>
+            <div class="mini muted">Schema, sitemap, kecepatan & meta tags.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px" class="muted">Butuh fitur khusus? Saya tambahkan API, CRM, integrasi kurir, atau automasi yang Anda butuhkan.</div>
+      </div>
+
+      <aside class="panel" aria-label="Quick details">
+        <h3>Ringkasan Cepat</h3>
+        <div class="meta">
+          <div class="chip">4 Sesi Bimbingan</div>
+          <div class="chip">Sample</div>
+          <div class="chip">Unlimited Revisi</div>
+        </div>
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="flex:1">
+            <div class="mini muted">Waktu pengerjaan</div>
+            <div style="font-weight:800">2–4 minggu (terserah scope)</div>
+          </div>
+          <div style="flex:1;text-align:right">
+            <div class="mini muted">Mulai dari</div>
+            <div class="price">IDR 18.000.000</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="mini muted">Kontak:</div>
+          <div style="font-weight:700;margin-top:6px">WA: 0831-6658-4901</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features" class="features" aria-labelledby="features-title">
+      <div>
+        <h2 id="features-title">Fitur Utama</h2>
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="fi-icon">⚙️</div>
+            <div>
+              <div style="font-weight:700">Admin Panel Lengkap</div>
+              <div class="mini muted">Buat, edit, dan hapus halaman, posting, pengguna, order, dan statistik.</div>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="fi-icon">🔐</div>
+            <div>
+              <div style="font-weight:700">Member Area & Database</div>
+              <div class="mini muted">Registrasi, login, level akses, dan area khusus member.</div>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="fi-icon">💳</div>
+            <div>
+              <div style="font-weight:700">Integrasi Pembayaran</div>
+              <div class="mini muted">Midtrans, Xendit, Stripe, PayPal — sandbox & live testing.</div>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="fi-icon">🔗</div>
+            <div>
+              <div style="font-weight:700">Integrasi API Pihak Ketiga</div>
+              <div class="mini muted">CRM, chat, analytics, kurir, dan lain-lain.</div>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="fi-icon">🚀</div>
+            <div>
+              <div style="font-weight:700">SEO Advanced</div>
+              <div class="mini muted">Sitemap, schema, meta tags, optimasi kecepatan, dan monitoring.</div>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="fi-icon">🎓</div>
+            <div>
+              <div style="font-weight:700">4 Sesi Bimbingan</div>
+              <div class="mini muted">Screen share + rekaman untuk handover dan maintenance.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <h3>Deliverables</h3>
+        <ul class="mini muted">
+          <li>Source code lengkap (HTML/CSS/JS) atau CMS export</li>
+          <li>Admin panel + manual pengguna (PDF)</li>
+          <li>Integrasi pembayaran diuji (sandbox)</li>
+          <li>SEO checklist & sitemap.xml</li>
+          <li>4 x 45 menit sesi bimbingan (rekaman)</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="pricing" style="margin-top:18px">
+      <h2>Contoh Paket</h2>
+      <div class="pricing">
+        <div class="price-card">
+          <div style="font-weight:800">Basic</div>
+          <div class="muted">Landing page custom + payment + admin</div>
+          <div style="margin-top:10px" class="price">IDR Sample</div>
+        </div>
+        <div class="price-card">
+          <div style="font-weight:800">Standard</div>
+          <div class="muted">Member area, SEO, API dasar</div>
+          <div style="margin-top:10px" class="price">IDR Sample</div>
+        </div>
+        <div class="price-card">
+          <div style="font-weight:800">Premium</div>
+          <div class="muted">Full features — seperti yang dijelaskan</div>
+          <div style="margin-top:10px" class="price">IDR Sample</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2>Pertanyaan Umum</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Berapa lama waktu pengerjaan website premium?</span>
+            <div class="faq-icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p class="mini muted">Waktu pengerjaan tergantung kompleksitas proyek:</p>
+              <ul class="mini muted">
+                <li>Website Basic: 1-2 minggu</li>
+                <li>Website Standard: 2-3 minggu</li>
+                <li>Website Premium: 3-4 minggu</li>
+              </ul>
+              <p class="mini muted">Timeline dapat disesuaikan dengan kebutuhan dan prioritas Anda.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Sample</span>
+            <div class="faq-icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p class="mini muted">Ya, semua paket sudah termasuk:</p>
+              <ul class="mini muted">
+                <li>Sample</li>
+                <li>sample</li>
+                <li>SSL certificate</li>
+                <li>Email profesional</li>
+              </ul>
+              <p class="mini muted">Setelah tahun pertama, biaya perpanjangan hosting dan domain adalah IDR 800.000/tahun.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Apakah bisa request fitur khusus?</span>
+            <div class="faq-icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p class="mini muted">Tentu saja! Kami menerima request fitur khusus seperti:</p>
+              <ul class="mini muted">
+                <li>Integrasi dengan API pihak ketiga</li>
+                <li>Sistem booking/reservasi</li>
+                <li>Marketplace multi-vendor</li>
+                <li>Kustomisasi CRM</li>
+                <li>Integrasi dengan sistem internal perusahaan</li>
+              </ul>
+              <p class="mini muted">Fitur khusus akan dikenakan biaya tambahan sesuai kompleksitas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Bagaimana proses revisi dan feedback?</span>
+            <div class="faq-icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p class="mini muted">Kami menggunakan sistem feedback yang terstruktur:</p>
+              <ul class="mini muted">
+                <li>Unlimited revisi selama masa pengerjaan</li>
+                <li>Feedback melalui Trello/Google Docs</li>
+                <li>Video call untuk diskusi kompleks</li>
+                <li>Staging site untuk preview sebelum launch</li>
+              </ul>
+              <p class="mini muted">Kami memastikan Anda puas dengan hasil akhir sebelum website diluncurkan.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Apakah website sudah optimasi SEO?</span>
+            <div class="faq-icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p class="mini muted">Ya, semua website kami sudah dioptimasi untuk SEO:</p>
+              <ul class="mini muted">
+                <li>Struktur HTML semantic</li>
+                <li>Meta tags dan Open Graph optimization</li>
+                <li>Schema markup (JSON-LD)</li>
+                <li>Sitemap.xml dan robots.txt</li>
+                <li>Optimasi kecepatan loading</li>
+                <li>Mobile-first responsive design</li>
+              </ul>
+              <p class="mini muted">Kami juga menyediakan panduan SEO dasar untuk membantu Anda memulai.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Bagaimana dengan keamanan website?</span>
+            <div class="faq-icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p class="mini muted">Keamanan adalah prioritas utama kami:</p>
+              <ul class="mini muted">
+                <li>SSL certificate terenkripsi</li>
+                <li>Proteksi terhadap SQL injection</li>
+                <li>Validasi input data</li>
+                <li>Regular security updates</li>
+                <li>Backup rutin</li>
+                <li>DDoS protection</li>
+              </ul>
+              <p class="mini muted">Kami juga melakukan security audit sebelum website diluncurkan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" style="margin-top:18px">
+      <h2>Testimoni</h2>
+      <div class="testimonials">
+        <div class="testi">
+          <div class="testi-header">
+            <div class="testi-avatar">
+              <img src="https://lh3.googleusercontent.com/a-/ACNPEu9fK0CqY8H3Q4g2i8Y7L3V2J6K8L9M0N1B2C3D4E5F6G=w60-h60-p-rp-mo-br100" alt="Alya">
+            </div>
+            <div>
+              <div style="font-weight:800">Alya • Founder</div>
+              <div class="mini muted">Google Business Review</div>
+            </div>
+          </div>
+          <div class="mini muted">"sample"</div>
+        </div>
+        <div class="testi">
+          <div class="testi-header">
+            <div class="testi-avatar">
+              <img src="https://lh3.googleusercontent.com/a-/ACNPEu8hJ7K8L9M0N1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q=w60-h60-p-rp-mo-br100" alt="Rizal">
+            </div>
+            <div>
+              <div style="font-weight:800">Rizal • Toko Online</div>
+              <div class="mini muted">Google Business Review</div>
+            </div>
+          </div>
+          <div class="mini muted">"Integrasi pembayaran dan dashboard admin sangat membantu operasional kami."</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="maps" class="maps-section">
+      <h2>Lokasi Kami</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.907242037754!2d107.60841931538466!3d-6.902069169772068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e653c3a4791d%3A0x101658aa868b3c3f!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1638171872348!5m2!1sid!2sid" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"
+          title="Lokasi kami di Bandung">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>Hubungi / Order</h2>
+      <form id="contactForm" style="background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); padding:12px;border-radius:10px">
+        <div class="grid-2">
+          <input name="name" placeholder="Nama" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+          <input name="email" type="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+        </div>
+        <div style="margin-top:10px">
+          <input name="phone" placeholder="No. WhatsApp" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+        </div>
+        <div style="margin-top:10px">
+          <textarea name="message" placeholder="Ceritakan kebutuhan singkat (fitur utama / deadline / budget)" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:center">
+          <button class="btn" type="submit">Kirim Pesan</button>
+          <div class="muted">atau WA: <a class="ghost" href="https://wa.me/6283166584901" target="_blank">0831-6658-4901</a></div>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="mini muted">© "Premium Website" — Built with HTML/CSS/JS • Ready-to-deploy</div>
+      <div class="mini muted">Design by Web Developer • Support 6 bulan</div>
+    </footer>
+  </main>
+
+  <script>
+    // Initialize Particles.js
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#06b6d4" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3, random: true },
+        size: { value: 2, random: true },
+        line_linked: {
+          enable: true,
+          distance: 120,
+          color: "#06b6d4",
+          opacity: 0.1,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        }
+      },
+      retina_detect: true
+    });
+
+    // IMPROVED FAQ functionality with better performance
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        
+        // Close all FAQ items first
+        document.querySelectorAll('.faq-answer').forEach(item => {
+          item.classList.remove('open');
+        });
+        document.querySelectorAll('.faq-question').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open current item if it wasn't open
+        if (!isOpen) {
+          // Use requestAnimationFrame for smoother animation
+          requestAnimationFrame(() => {
+            answer.classList.add('open');
+            question.classList.add('active');
+          });
+        }
+      });
+    });
+
+    // Mobile-friendly demo behaviors
+    document.getElementById('demoBtn').addEventListener('click', ()=>{
+      alert('Demo: ini adalah mockup. Untuk demo interaktif minta versi live.');
+    });
+
+    document.getElementById('startBtn').addEventListener('click', ()=>{
+      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    });
+
+    // Contact form fake submit (replace with backend endpoint)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(this);
+      const name = data.get('name');
+      // simple validation
+      if(!name){ alert('Masukkan nama Anda'); return }
+      // show simple confirmation
+      alert('Terima kasih, ' + name + '! Pesan Anda telah dikirim. Saya akan kontak via WA/Email.');
+      this.reset();
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Simple accessibility: reduce motion respect
+    try{
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        // avoid animations
+        document.querySelectorAll('.card, .feature-item, .price-card, .testi, .faq-answer, .faq-icon').forEach(el => {
+          el.style.transition = 'none';
+        });
+      }
+    }catch(e){}
+  </script>
+</body>
+</html>
